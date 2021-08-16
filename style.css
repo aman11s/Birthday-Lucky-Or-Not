@@ -58,3 +58,21 @@ body {
     margin-bottom: 8rem;
 }
 
+.list-item-inline {
+    display: inline-block;
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+
+.footer i {
+    color: #FFFFFF;
+    font-size: 2rem;
+    padding: 1rem;
+}
