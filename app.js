@@ -21,7 +21,13 @@ resetButton.addEventListener("click", () => {
 function checkBirthDateIsLucky() {
     const birthDate = dob.value;
     const sum = calculateSum(birthDate);
-    compare(sum, luckyNumber.value);
+    if(birthDate && luckyNumber.value) {
+        compare(sum, luckyNumber.value);
+    } else {
+        messageDiv.style.display = "block";
+        messageDiv.style.color = "red";
+        messageDiv.innerText = "Please enter both inputs!!"
+    }
 }
 
 function compare (sum, luckyNumber) {
