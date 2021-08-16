@@ -19,3 +19,20 @@ body {
     background-color: var(--primary-dark);
     color: #FFFFFF;
 }
+
+.privacy {
+    display: inline-block;
+    padding: 0.6rem;
+    margin: 1rem;
+    color: #FF0000;
+    border: 2px solid #FF0000;
+    box-shadow: 2px 2px 2px #FF0000;
+}
+
+.description {
+    margin: 1rem;
+}
+
+.dob-div {
+    margin: 1rem;
+}
