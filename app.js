@@ -10,6 +10,29 @@ const resetButton = document.querySelector("#reset-btn");
 luckyGif.style.display = "none";
 unluckyGif.style.display = "none";
 
+function errorHandler(birth, luckyNo) {
+    if(birth === "") {
+        messageDiv.innerText = "Please select your birth date!!";
+        messageDiv.style.color = "red";
+    }
+    if(luckyNo === "") {
+        messageDiv.innerText = "Please enter lucky number!!";
+        messageDiv.style.color = "red";
+        luckyGif.style.display = "none";
+        unluckyGif.style.display = "none";
+    }
+    if(luckyNo < 0) {
+        messageDiv.innerText = "Lucky number cannot be negative value";
+        messageDiv.style.color = "red";
+        luckyGif.style.display = "none";
+        unluckyGif.style.display = "none";
+    }
+    if(birth === "" && luckyNo === "") {
+        messageDiv.innerText = "Please enter both fields";
+        messageDiv.style.color = "red";
+    }
+}
+
 resetButton.addEventListener("click", () => {
     dob.value = "";
     luckyNumber.value = "";
@@ -28,6 +51,7 @@ function checkBirthDateIsLucky() {
         messageDiv.style.color = "red";
         messageDiv.innerText = "Please enter both inputs!!"
     }
+    errorHandler(birthDate, luckyNumber.value);
 }
 
 function compare (sum, luckyNumber) {
